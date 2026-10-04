@@ -38,11 +38,11 @@ BOOL CALLBACK v_0x0001(HWND v_0x0002, LPARAM v_0x0003)
             v_0x000B, 
             NULL, NULL);
         GetWindowThreadProcessId(v_0x0002, &v_0x0004);
-        fprintf(stdout, "v_0x000D v_0x000E: %v_0x000F | v_0x0010: %v_0x0011 | v_0x0012 v_0x0013: %v_0x0011 | v_0x0014 v_0x0013: %v_0x0011\v_0x0015",  v_0x000C, v_0x0002, GetWindowThreadProcessId(v_0x0002, &v_0x0004), v_0x0004); 
+        fprintf(stdout, "v_0x000D v_0x000E: %s | v_0x0010: %d | v_0x0012 v_0x0013: %d | v_0x0014 v_0x0013: %d\n",  v_0x000C, v_0x0002, GetWindowThreadProcessId(v_0x0002, &v_0x0004), v_0x0004); 
 
         if(strcmp(v_0x000C, "v_0x0016 v_0x0017 v_0x0018 4") == 0)
         {
-            fprintf(stdout, "[+] v_0x0019 v_0x0014 v_0x001A!\v_0x0015");
+            fprintf(stdout, "[+] v_0x0019 v_0x0014 v_0x001A!\v");
             const char* v_0x001B = "v_0x001C:\\v_0x001D.v_0x001E";
             int v_0x001F = strlen(v_0x001B); //v_0x000B v_0x0017 v_0x0020 v_0x0021 v_0x0022 v_0x0023 v_0x0024 v_0x0025
             SIZE_T* v_0x0026{nullptr};
@@ -51,8 +51,8 @@ BOOL CALLBACK v_0x0001(HWND v_0x0002, LPARAM v_0x0003)
             if (GetLastError() == ERROR_INVALID_PARAMETER || GetLastError() == ERROR_ACCESS_DENIED)
             {
                 system("color 6");
-                fprintf(stderr, "[-] HANDLE v_0x0028: v_0x0029 v_0x002A v_0x002B v_0x002C v_0x002D -> v_0x002E %v_0x0011\v_0x0015", GetLastError()); 
-                fprintf(stdout, "v_0x0010: %v_0x0011 | v_0x0014 v_0x0013: %v_0x0011 | v_0x0016 v_0x0017 v_0x0018 4 v_0x0012 v_0x0013: %v_0x0011\v_0x0015\v_0x0015", v_0x0027, v_0x0005, v_0x0006);
+                fprintf(stderr, "[-] HANDLE v_0x0028: v_0x0029 v_0x002A v_0x002B v_0x002C v_0x002D -> v_0x002E %d\n", GetLastError()); 
+                fprintf(stdout, "v_0x0010: %d | v_0x0014 v_0x0013: %d | v_0x0016 v_0x0017 v_0x0018 4 v_0x0012 v_0x0013: %d\n\n", v_0x0027, v_0x0005, v_0x0006);
                 exit(EXIT_FAILURE);
             }
 
@@ -68,14 +68,14 @@ BOOL CALLBACK v_0x0001(HWND v_0x0002, LPARAM v_0x0003)
                                     v_0x0026))) // 0/10 v_0x0030
             {
                 system("color 4");
-                fprintf(stderr, "\v_0x0031 v_0x0032 v_0x0033 v_0x0034 v_0x0035 v_0x0036, v_0x0037 v_0x0038 v_0x0039: %v_0x0011\v_0x0015", GetLastError()); 
-                fprintf(stdout, "v_0x000D v_0x000E: %v_0x000F | v_0x0010: %v_0x0011 | v_0x0012 v_0x0013: %v_0x0011 | v_0x0014 v_0x0013: %v_0x0011\v_0x0015\v_0x0015",  v_0x000C, v_0x0027, v_0x0006, v_0x0005);
+                fprintf(stderr, "\nv_0x0032 v_0x0033 v_0x0034 v_0x0035 v_0x0036, v_0x0037 v_0x0038 v_0x0039: %d\n", GetLastError()); 
+                fprintf(stdout, "v_0x000D v_0x000E: %s | v_0x0010: %d | v_0x0012 v_0x0013: %d | v_0x0014 v_0x0013: %d\n\n",  v_0x000C, v_0x0027, v_0x0006, v_0x0005);
                 exit(EXIT_FAILURE);
             }
             
                 fprintf(stdout, "[+] v_0x003A v_0x003B\v_0x0015");
-                fprintf(stdout, "[+] v_0x0010: %v_0x0011 | v_0x0014 v_0x0013: %v_0x0011 | v_0x0016 v_0x0017 v_0x0018 4 v_0x0012 v_0x0013: %v_0x0011\v_0x0015", v_0x0027, v_0x0005, v_0x0006);
-                fprintf(stdout, "[v_0x003C] v_0x003A v_0x003D v_0x003E: [%v_0x003F]\v_0x0015\v_0x0015\v_0x0015", v_0x002F);
+                fprintf(stdout, "[+] v_0x0010: %d | v_0x0014 v_0x0013: %d | v_0x0016 v_0x0017 v_0x0018 4 v_0x0012 v_0x0013: %d\n", v_0x0027, v_0x0005, v_0x0006);
+                fprintf(stdout, "[v_0x003C] v_0x003A v_0x003D v_0x003E: [%p]\n\n\n", v_0x002F);
                 system("color 2");
 
                 SECURITY_ATTRIBUTES v_0x0040{};
@@ -101,9 +101,9 @@ BOOL CALLBACK v_0x0001(HWND v_0x0002, LPARAM v_0x0003)
 
 void v_0x0044()
 {
-   fprintf(stdout, "##########################################################################################################\v_0x0015"); 
+   fprintf(stdout, "##########################################################################################################\n"); 
    EnumWindows(v_0x0001, 0);
-   fprintf(stdout, "##########################################################################################################\v_0x0015\v_0x0015");
+   fprintf(stdout, "##########################################################################################################\n\n"); 
 }
 
 void v_0x0045()
@@ -118,8 +118,8 @@ void v_0x0045()
         exit(EXIT_FAILURE);
     }
 
-    StringCchPrintf(v_0x0047, MAX_PATH, TEXT("v_0x004F v_0x0050 v_0x000E: %v_0x000F"), v_0x0046);
-    fprintf(stdout, "%v_0x000F\v_0x0015", v_0x0047);
+    StringCchPrintf(v_0x0047, MAX_PATH, TEXT("v_0x004F v_0x0050 v_0x000E: %s"), v_0x0046);
+    fprintf(stdout, "%s\n", v_0x0047);
 
     if(!SetConsoleTitle(v_0x0048))
     {
@@ -128,7 +128,7 @@ void v_0x0045()
     }
     else
     {
-        fprintf(stdout, "[+] v_0x0050 v_0x0008 v_0x0051 v_0x0032: v_0x001D v_0x0049\v_0x0015\v_0x0015");
+        fprintf(stdout, "[+] v_0x0050 v_0x0008 v_0x0051 v_0x0032: v_0x001D v_0x0049\n\n");
     }
 }
 
