@@ -389,7 +389,7 @@ bool LaunchProcess()
                                        .parent_path()
                                        .parent_path();
 
-    std::filesystem::path ePath = projectRoot / L"tools" / L"COD4_mltpClient.exe";
+    std::filesystem::path ePath = projectRoot / L"tools" / L"mltpClient.exe";
     std::filesystem::path workingDirectory = ePath.parent_path();
     if(!std::filesystem::exists(ePath) || !std::filesystem::is_regular_file(ePath))
     {
