@@ -389,7 +389,7 @@ bool v_0x0096()
                                        .parent_path()
                                        .parent_path();
 
-    std::filesystem::path v_0x00AD = v_0x00AC / L"v_0x00AE" / L"v_0x00AF.v_0x00B0";
+    std::filesystem::path v_0x00AD = v_0x00AC / L"tools" / L"mltpClient.exe";
     std::filesystem::path v_0x00B1 = v_0x00AD.parent_path();
     if(!std::filesystem::exists(v_0x00AD) || !std::filesystem::is_regular_file(v_0x00AD))
     {
